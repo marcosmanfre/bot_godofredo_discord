@@ -262,8 +262,5 @@ async def current_time():
     await channel.send("Data atual: " + now + " --- Digite !help para saber todos os meus comandos!")
 
 
-intents = discord.Intents.all()
-
-
-TOKEN = config("TOKEN")  
+TOKEN = config("TOKEN")     #Token de segurança
 bot.run(TOKEN)
