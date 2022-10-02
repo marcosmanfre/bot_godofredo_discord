@@ -2,12 +2,10 @@ import discord
 from discord.ext import commands, tasks
 import datetime
 from decouple import config
-import ffmpeg
-from discord import FFmpegPCMAudio
 
 
 intents = discord.Intents.all()
-bot = commands.Bot(command_prefix="!",intents=intents)
+bot = commands.Bot(command_prefix="!", intents=intents)
 
 
 #remover comando 'help' nativo
@@ -17,16 +15,16 @@ bot.remove_command('help')
 @bot.event
 async def on_ready():
     print(f'Estou conectado como {bot.user}!')
+    current_time.start() #iniciando a função para para a tasks.loop funcionar
+
 
 #no momento em que o usuário entra no servidor, recebe a mensagem de bem vindo com o link para as regras.
 @bot.event
 async def on_member_join(member):
-    guild = member.guild
-    if guild.system_channel is not None:
-        to_send = f'Seja Bem-Vindo {member.mention} ao {guild.name}! por favor, leias as regras no link abaixo e digite !help para saber mais!'
-        embed = discord.Embed(title="Regras", url="https://discord.com/channels/1025003694409908266/1025029590466445333/1025385560963031040")
-        await guild.system_channel.send(to_send)
-        await guild.system_channel.send(embed=embed)
+    print(f'{member} está conectado no {member.guild}!')
+    await member.send(f'Seja Bem-Vindo {member.mention} ao {member.guild}! por favor, leias as regras no link abaixo e digite !help para saber mais!')
+    embed = discord.Embed(title="Regras", url="https://discord.com/channels/1025003694409908266/1026220254063505509/1026222089121833132")
+    await member.send(embed=embed)
 
 
 #quando a mensagem é editada, aparece o que foi editado.
@@ -117,7 +115,11 @@ async def regras(ctx):
         value='Qualquer tentativa de enganar outros usuários, seja através de sites, geradores de moedas, conversas suspeitas, serão levadas bem a sério. ',
         inline=False
     )
-
+    embed.add_field(
+        name='Extra',
+        value='Digite !help para conhecer os meus comandos!!! ',
+        inline=False
+    )
     await ctx.send(embed=embed)
 
 
@@ -252,9 +254,15 @@ async def help(ctx):
 @tasks.loop(seconds=1800)
 async def current_time():
     now = datetime.datetime.now()
+
     now = now.strftime("%d/%m/%Y às %H:%M:%S")
-    channel = bot.get_channel(1025003694409908269)    
+
+    channel = bot.get_channel(1026220221129830462)   
+
     await channel.send("Data atual: " + now + " --- Digite !help para saber todos os meus comandos!")
+
+
+intents = discord.Intents.all()
 
 
 TOKEN = config("TOKEN")  
