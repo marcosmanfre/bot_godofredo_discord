@@ -23,7 +23,7 @@ Criando um Bot no Discord com discord.py pelo Projeto Final DB1 Start.
 
 ![image](https://user-images.githubusercontent.com/76493851/227718284-336f43b0-8a76-41cc-b1c6-1ab295af4d99.png)
 
-![image](https://user-images.githubusercontent.com/76493851/227718318-0613c580-1c9b-4da3-9f37-9d95f57f1299.png)
+![image](https://user-images.githubusercontent.com/76493851/227718386-17efbce6-9305-408b-b0d0-c99435b97ba3.png)
 
 
 
