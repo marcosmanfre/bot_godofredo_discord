@@ -11,6 +11,23 @@ Criando um Bot no Discord com discord.py pelo Projeto Final DB1 Start.
 * [Python-decouple 3.6](https://pypi.org/project/python-decouple/) - Para configurar o TOKEN de acesso.
 
 
+###  Imagens
+
+![image](https://user-images.githubusercontent.com/76493851/227718128-6214f36b-d416-4b95-bd1f-1c784b4f715e.png)
+
+![image](https://user-images.githubusercontent.com/76493851/227718148-8d99d511-3ce5-4b32-ab8a-0d94504952b4.png)
+
+![image](https://user-images.githubusercontent.com/76493851/227718175-c8df1385-8586-4d71-9a26-25890d16aaeb.png)
+
+![image](https://user-images.githubusercontent.com/76493851/227718273-d41a9757-46de-4b9f-88b0-b64d2a110f55.png)
+
+![image](https://user-images.githubusercontent.com/76493851/227718284-336f43b0-8a76-41cc-b1c6-1ab295af4d99.png)
+
+![image](https://user-images.githubusercontent.com/76493851/227718318-0613c580-1c9b-4da3-9f37-9d95f57f1299.png)
+
+
+
+
 ## ⚙️ Comandos do bot.
 ```
 !regras - Lista com as regras do servidor. (Não requer argumento)
