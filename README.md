@@ -50,4 +50,4 @@ Criando um Bot no Discord com discord.py pelo Projeto Final DB1 Start.
 ```
 
 
-Desenvolvido por [Marcos Manfré](https://github.com/marcosmanfre) 
+Desenvolvido por [Marcos Manfré](https://www.linkedin.com/in/marcosmanfre/) 
